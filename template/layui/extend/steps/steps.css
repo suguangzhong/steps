@@ -1,0 +1,112 @@
+.step-body {
+	position: relative;
+}
+
+.step-header {
+	/*width: 100%;*/
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 800px;
+}
+
+.step-header ul {
+	padding: 0;
+}
+
+.step-header li {
+	list-style-type: none;
+	float: left;
+	position: relative;
+	font-size: 14px;
+	color: #ABABAB;
+	width: 12%;
+	text-align: center;
+}
+
+.step-header li.step-title-item:after {
+	content: "";
+	width: 60%;
+	width: -moz-calc(100% - 50px);
+	width: -webkit-calc(100% - 50px);
+	width: calc(100% - 50px);
+	display: inline-block;
+	height: 2px;
+	background-color: #ccc;
+	position: absolute;
+	top: 14px;
+	right: 70%;
+	right: -moz-calc(50% + 25px);
+	right: -webkit-calc(50% + 25px);
+	right: calc(50% + 25px);
+}
+
+.step-header li.step-title-item:first-of-type:after {
+	width: 0;
+}
+
+.step-header li.step-title-item.step-title-current:after {
+	background-color: #597ef7;
+}
+
+.step-header li.step-title-item.step-title-done:after {
+	background-color: #597ef7;
+}
+
+.step-header li.step-title-item.step-title-done .step-icon {
+	background: #fff url(images/check.png) no-repeat 3px 3px;
+	background-size: 80%;
+	color: transparent;
+	border-color: #597ef7;
+}
+
+.step-header li.step-title-item.step-title-current .step-icon {
+	background-color: #597ef7;
+	color: #fff;
+	border-color: #597ef7;
+}
+
+.step-header li.step-title-item.step-title-current .step-title {
+	color: #000000;
+}
+
+.step-header li.step-title-item .step-icon {
+	display: block;
+	border: 1px solid #ABABAB;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 50%;
+	text-align: center;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+	z-index: 1;
+	background: #fff;
+}
+
+.step-header li.step-title-item .step-title {
+	line-height: 40px;
+}
+
+.step-header li a {
+	position: absolute;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #777;
+	height: 25px;
+	line-height: 25px;
+	background: url(./images/cell.png) center top no-repeat;
+	display: block;
+	background-color: #FFFFFF;
+	width: 45px;
+	left: 0;
+	top: 0;
+	text-decoration: none;
+	text-align: center;
+}
+
+.step-list {
+	display: none;
+	clear: both;
+	min-height: 300px;
+}
